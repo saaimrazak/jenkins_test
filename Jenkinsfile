@@ -78,6 +78,7 @@ docker run --rm \\
     --project "$DC_PROJECT" \\
     --out /report'''
                   }
+                  dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
               }
               }
     }
