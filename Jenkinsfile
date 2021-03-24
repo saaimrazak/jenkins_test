@@ -30,7 +30,7 @@ pipeline {
                   steps {
                       script {
                           scannerHome = tool 'sonar';
-                          withSonarQubeEnv('sonar') {
+                          withSonarQubeEnv('sonarqubeconfig') {
                               sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=javaapplication -Dsonar.projectKey=java:findbugs -Dsonar.projectVersion=1.0 -Dsonar.projectBaseDir=$WORKSPACE -Dsonar.sources=$WORKSPACE -Dsonar.java.libraries=$WORKSPACE -Dsonar.java.binaries=$WORKSPACE"
                               sh "sleep 60"
                           }
